@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox
+    xmlns="http://javafx.com/javafx/21"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.rgb7021.PrimaryController"
+    spacing="20"
+    alignment="CENTER"
+    prefWidth="420"
+    prefHeight="340"
+    style="-fx-background-color: #FDF6FB;">
+
+    <padding><Insets top="32" bottom="32" left="32" right="32"/></padding>
+
+    <!-- Title -->
+    <VBox spacing="4" alignment="CENTER">
+        <Label text="RGB7021 — Параллелепипед"
+               style="-fx-font-size: 18px;
+                      -fx-font-weight: bold;
+                      -fx-text-fill: #993556;
+                      -fx-font-family: 'Segoe UI';"/>
+        <Label text="12 ирмэгийн нийлбэр = 4 × (a + b + c)"
+               style="-fx-font-size: 12px;
+                      -fx-text-fill: #C07090;
+                      -fx-font-family: 'Segoe UI';"/>
+    </VBox>
+
+    <!-- Inputs -->
+    <VBox spacing="0" alignment="CENTER"
+          style="-fx-background-color: #FFFFFF;
+                 -fx-background-radius: 14;
+                 -fx-border-color: #F4C0D1;
+                 -fx-border-width: 1;
+                 -fx-border-radius: 14;">
+        <padding><Insets top="20" bottom="20" left="24" right="24"/></padding>
+
+        <HBox spacing="16" alignment="CENTER">
+
+            <!-- a -->
+            <VBox spacing="6" alignment="CENTER">
+                <Label text="a  (урт)"
+                       style="-fx-font-size: 11px; -fx-font-weight: bold;
+                              -fx-text-fill: #C07090; -fx-font-family: 'Segoe UI';"/>
+                <TextField fx:id="aInput" promptText="0"
+                           prefWidth="82" prefHeight="48"
+                           style="-fx-font-size: 20px; -fx-font-weight: bold;
+                                  -fx-alignment: center;
+                                  -fx-background-color: #FDF0F5;
+                                  -fx-background-radius: 10;
+                                  -fx-border-color: #F4C0D1;
+                                  -fx-border-radius: 10;
+                                  -fx-text-fill: #993556;
+                                  -fx-font-family: 'Segoe UI';"/>
+            </VBox>
+
+            <Label text="+"
+                   style="-fx-font-size: 22px; -fx-text-fill: #ED93B1;
+                          -fx-font-weight: bold; -fx-padding: 14 0 0 0;"/>
+
+            <!-- b -->
+            <VBox spacing="6" alignment="CENTER">
+                <Label text="b  (өргөн)"
+                       style="-fx-font-size: 11px; -fx-font-weight: bold;
+                              -fx-text-fill: #C07090; -fx-font-family: 'Segoe UI';"/>
+                <TextField fx:id="bInput" promptText="0"
+                           prefWidth="82" prefHeight="48"
+                           style="-fx-font-size: 20px; -fx-font-weight: bold;
+                                  -fx-alignment: center;
+                                  -fx-background-color: #FDF0F5;
+                                  -fx-background-radius: 10;
+                                  -fx-border-color: #F4C0D1;
+                                  -fx-border-radius: 10;
+                                  -fx-text-fill: #993556;
+                                  -fx-font-family: 'Segoe UI';"/>
+            </VBox>
+
+            <Label text="+"
+                   style="-fx-font-size: 22px; -fx-text-fill: #ED93B1;
+                          -fx-font-weight: bold; -fx-padding: 14 0 0 0;"/>
+
+            <!-- c -->
+            <VBox spacing="6" alignment="CENTER">
+                <Label text="c  (өндөр)"
+                       style="-fx-font-size: 11px; -fx-font-weight: bold;
+                              -fx-text-fill: #C07090; -fx-font-family: 'Segoe UI';"/>
+                <TextField fx:id="cInput" promptText="0"
+                           prefWidth="82" prefHeight="48"
+                           style="-fx-font-size: 20px; -fx-font-weight: bold;
+                                  -fx-alignment: center;
+                                  -fx-background-color: #FDF0F5;
+                                  -fx-background-radius: 10;
+                                  -fx-border-color: #F4C0D1;
+                                  -fx-border-radius: 10;
+                                  -fx-text-fill: #993556;
+                                  -fx-font-family: 'Segoe UI';"/>
+            </VBox>
+        </HBox>
+    </VBox>
+
+    <!-- Button -->
+    <Button text="= Тооцоол"
+            onAction="#handleCalculate"
+            prefWidth="160" prefHeight="42"
+            style="-fx-background-color: #D4537E;
+                   -fx-background-radius: 12;
+                   -fx-text-fill: white;
+                   -fx-font-size: 14px;
+                   -fx-font-weight: bold;
+                   -fx-font-family: 'Segoe UI';
+                   -fx-cursor: hand;"/>
+
+    <!-- Result -->
+    <Label fx:id="resultLabel" text=""
+           style="-fx-font-size: 22px;
+                  -fx-font-weight: bold;
+                  -fx-text-fill: #993556;
+                  -fx-background-color: #FBEAF0;
+                  -fx-background-radius: 99;
+                  -fx-border-color: #ED93B1;
+                  -fx-border-width: 0.5;
+                  -fx-border-radius: 99;
+                  -fx-padding: 6 24 6 24;
+                  -fx-font-family: 'Segoe UI';"/>
+
+</VBox>
