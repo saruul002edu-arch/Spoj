@@ -8,39 +8,44 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="180.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example2.PrimaryController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="200.0" prefWidth="220.0"
+      style="-fx-background-color: #f5f0ff;"
+      xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example2.PrimaryController">
    <children>
-      <VBox prefHeight="170.0" prefWidth="180.0">
+      <VBox prefHeight="200.0" prefWidth="220.0" spacing="10.0">
          <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
          </padding>
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="279.0" spacing="10.0">
+
+            <Label text="🗓 Жил → Сар" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #6c3fc5;"/>
+
+            <HBox alignment="CENTER_LEFT" spacing="8.0">
                <children>
-                  <Label text="Year:" />
-                  <TextField fx:id="yearField" prefWidth="100.0">
-                     <HBox.margin>
-                        <Insets left="11.0" />
-                     </HBox.margin>
-                  </TextField>
+                  <Label text="Year" prefWidth="50.0" style="-fx-text-fill: #555;"/>
+                  <TextField fx:id="yearField" prefWidth="110.0"
+                             style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #c9b8f0; -fx-padding: 4 8;"/>
                </children>
             </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="279.0" spacing="10.0">
+
+            <HBox alignment="CENTER_LEFT" spacing="8.0">
                <children>
-                  <Label text="Month:" />
-                  <TextField fx:id="monthField" prefWidth="99.0" />
+                  <Label text="Month" prefWidth="50.0" style="-fx-text-fill: #555;"/>
+                  <TextField fx:id="monthField" prefWidth="110.0"
+                             style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #c9b8f0; -fx-padding: 4 8;"/>
                </children>
             </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="279.0">
+
+            <HBox alignment="CENTER_LEFT" spacing="8.0">
                <children>
-                  <Label text="output:" />
-                  <TextField fx:id="outputField" prefWidth="99.0">
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </TextField>
+                  <Label text="Output" prefWidth="50.0" style="-fx-text-fill: #555;"/>
+                  <TextField fx:id="outputField" prefWidth="110.0" editable="false"
+                             style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #c9b8f0; -fx-background-color: #ede8ff; -fx-padding: 4 8;"/>
                </children>
             </HBox>
+
          </children>
       </VBox>
    </children>
